@@ -1,0 +1,26 @@
+name: mimcid
+run-name: PLLLmim executed by ${{ github.actor }}
+on: workflow_dispatch
+jobs:
+  mimbuildA:
+    runs-on: ubuntu-latest
+    steps:
+    - name: s1a 
+      run: |
+           echo 1a
+           echo ${{ env.PIPE }}
+    
+
+  mimpackB:
+    runs-on: ubuntu-latest
+    steps:
+    - name: s1b 
+      run: |
+           echo 1b
+
+  mimtestC:
+    runs-on: ubuntu-latest
+    steps:
+    - name: s1c 
+      run: |
+           echo 1c
