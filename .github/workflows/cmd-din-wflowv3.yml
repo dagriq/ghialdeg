@@ -19,11 +19,12 @@ jobs:
       shell: bash
     - name: builddd
       run: |
-         pdm build
+         pdm build --dest build/lib
     - name: upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: greetings.zar
         path: build/lib
+        overwrite: true
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
