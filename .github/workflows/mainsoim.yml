@@ -11,7 +11,7 @@ jobs:
            echo ${{ env.PIPE }}
     - name: s2a 
       id: s2a
-      run: echo "URLSERV=https://call.now" >> ${{GITHUB_OUTPUT}}
+      run: echo "URLSERV=https://call.now" >> $GITHUB_OUTPUT
     - name: s3a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
        
