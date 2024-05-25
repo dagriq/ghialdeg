@@ -9,6 +9,7 @@ jobs:
       run: |
            echo 1a
            echo ${{ env.PIPE }}
+           echo `ls -al`
     - name: Checkout
       uses: actions/checkout@v2
     - name: spin the sheeet
