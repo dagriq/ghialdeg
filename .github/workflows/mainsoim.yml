@@ -17,8 +17,6 @@ jobs:
     - name: s3a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
        
-    
-
   mimpackB:
     runs-on: ubuntu-latest
     steps:
@@ -39,5 +37,15 @@ jobs:
       run: echo " eu JC.s3c citesct din jobA-out ${{ needs.mimbuildA.outputs.jaaa-stage }}"
     - name: s4c
       run: echo "eu sunt ecoul lui s4c"
+
+  mimtestD: 
+    runs-on: ubuntu-latest
+    needs: mimbuildA
+    steps:
+      - name: s1D
+        env:
+          BUILD_STAGE: ${{ needs.s2a.outputs.jaaa-stage }}
+        run: echo "The build stage din alti pantofi - jobD-s1D  is $BUILD_STAGE"
+    
       
       
