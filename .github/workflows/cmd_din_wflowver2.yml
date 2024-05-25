@@ -16,5 +16,8 @@ jobs:
     - name: check them
       run: |
          echo `pdm --version`
+    - name: builddd
+      run: |
+         pdm build
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
