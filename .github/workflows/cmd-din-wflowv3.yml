@@ -14,8 +14,8 @@ jobs:
          echo `pdm --version`
     - name: mk rooom
       run: |
-         shell: bash
          run: mkdir -p build/lib
+      shell: bash
     - name: builddd
       run: |
          pdm build
