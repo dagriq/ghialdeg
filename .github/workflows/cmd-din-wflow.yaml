@@ -1,1 +1,13 @@
-
+name: py din wflow
+on: workflow_dispatch
+jobs:
+  ctor:
+    runs-on: unbuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: instalez deps
+        run: |
+          python -m pip install --upgrade
+          pip install pytest
+      - name: finalul
+        run: echo Saltare
