@@ -1,6 +1,6 @@
 name: Custom GH Action
 run-name: AAAPLLLmim executed byx
-tuns: 
+runs: 
   using: composite
   steps:
     - name: s1a 
