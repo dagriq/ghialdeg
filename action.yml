@@ -1,12 +1,11 @@
 name: Custom GH Action
-run-name: AAAPLLLmim executed by ${{ github.actor }}
+run-name: AAAPLLLmim executed byx
 tuns: 
   using: composite
   steps:
     - name: s1a 
       run: |
            echo 1a
-           echo ${{ env.PIPE }}
     - name: Install Python
       uses: actions/setup-python@v4
       with:
