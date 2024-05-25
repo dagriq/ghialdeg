@@ -1,4 +1,4 @@
-name: Vine cmd din worflow
+name: Vine cmd din worflow V2
 on: workflow_dispatch
 jobs:
   mimbuildA:
@@ -23,6 +23,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: greetings.zar
-        path: build/libs 
+        path: . 
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
