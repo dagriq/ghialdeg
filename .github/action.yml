@@ -1,18 +1,16 @@
-name: Custom GH Action
-run-name: AAAPLLLmim executed by ${{ github.actor }}
-tuns: 
+name: Customz GH Action
+run-name: AAAPLLLmim executed byx
+runs: 
   using: composite
   steps:
-    - name: s1a 
-      run: |
-           echo 1a
-           echo ${{ env.PIPE }}
     - name: Install Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-    - name: s2a 
+    - name: s2axx 
       id: s2a
       run: python src/beta.py
-    - name: s3a 
-      run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
+      shell: bash
+    - name: s3ax 
+      run: python alpha.py
+      shell: bash
