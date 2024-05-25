@@ -1,0 +1,28 @@
+ame: Vine cmd din worflow V3
+on: workflow_dispatch
+jobs:
+  mimbuildA:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: instalez deps
+      run: |
+         python -m pip install --user pdm
+    - name: check them
+      run: |
+         echo `pdm --version`
+    - name: mk rooom
+      run: |
+         shell: bash
+         run: mkdir -p build/lib
+    - name: builddd
+      run: |
+         pdm build
+    - name: upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: greetings.zar
+        path: build/lib
+    - name: s399a 
+      run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
