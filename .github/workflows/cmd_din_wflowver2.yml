@@ -12,6 +12,6 @@ jobs:
       uses: actions/checkout@v2
     - name: instalez deps
       run: |
-         python -m pip install --user
+         python -m pip install --user pdm
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
