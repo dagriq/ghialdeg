@@ -1,0 +1,17 @@
+name: mimpid
+run-name: PLLLmim executed by ${{ github.actor }}
+on: workflow_dispatch
+jobs:
+  mimbuildA:
+    runs-on: ubuntu-latest
+    steps:
+    - name: s1a 
+      run: |
+           echo 1a
+           echo ${{ env.PIPE }}
+    - name: s2a 
+      id: s2a
+      run: python alpha1.py
+    - name: s3a 
+      run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
+       
