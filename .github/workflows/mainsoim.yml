@@ -4,6 +4,8 @@ on: workflow_dispatch
 jobs:
   mimbuildA:
     runs-on: ubuntu-latest
+    outputs:
+      jaaa-stage: ${{ steps.s2a.outputs.URLSERV }}
     steps:
     - name: s1a 
       run: |
@@ -26,13 +28,16 @@ jobs:
 
   mimtestC:
     runs-on: ubuntu-latest
+    needs: mimbuildA
     steps:
     - name: s1c 
       run: |
            echo 1c
     - name: s2c 
-      run: echo "eu s2c citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV }}"
+      run: echo "eu s2c citesc din step-out s2a-out ...${{ steps.s2a.outputs.URLSERV }}"
     - name: s3c
-      run: echo "eu sunt ecoul lui s3c"
+      run: echo " eu JC.s3c citesct din jobA-out ${{ needs.mimbuildA.outputs.jaaa-stage }}"
+    - name: s4c
+      run: echo "eu sunt ecoul lui s4c"
       
       
