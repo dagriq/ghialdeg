@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: spin the sheeet
-      uses: ./ # Uses an action in the root directory
+      uses: ./.github/action.yml # Uses an action in the root directory
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
        
