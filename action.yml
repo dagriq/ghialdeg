@@ -14,4 +14,4 @@ tuns:
       id: s2a
       run: python src/beta.py
     - name: s3a 
-      run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
+      run: echo "eu s3a citesc din s2a ENV."
