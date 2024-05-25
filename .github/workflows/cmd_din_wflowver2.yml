@@ -19,5 +19,10 @@ jobs:
     - name: builddd
       run: |
          pdm build
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: greetings.zar
+        path: build/libs 
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
