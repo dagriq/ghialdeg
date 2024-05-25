@@ -31,7 +31,7 @@ jobs:
       run: |
            echo 1c
     - name: s2c 
-      run: echo "eu s2c citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV }}
+      run: echo "eu s2c citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV }}"
     - name: s3c
       run: echo "eu sunt ecoul lui s3c"
       
