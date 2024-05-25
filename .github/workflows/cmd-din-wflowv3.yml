@@ -1,4 +1,4 @@
-ame: Vine cmd din worflow V3
+name: Vine cmd din worflow V3
 on: workflow_dispatch
 jobs:
   mimbuildA:
