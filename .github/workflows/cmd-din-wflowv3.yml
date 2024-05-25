@@ -23,7 +23,7 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: greetings.zar
+        name: artifact.whl
         path: build/lib
         overwrite: true
     - name: s399a 
