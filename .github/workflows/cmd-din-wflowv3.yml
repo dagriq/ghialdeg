@@ -31,9 +31,9 @@ jobs:
     - name: s399a 
       run: echo "eu s3a citesc din s2a ENV...${{ steps.s2a.outputs.URLSERV}}"
     - name: Dump steps context--j1
-        env:
+      env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
-        run: echo "$STEPS_CONTEXT"
+      run: echo "$STEPS_CONTEXT"
 ###
   logoss:
     runs-on: ubuntu-latest
