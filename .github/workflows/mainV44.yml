@@ -1,0 +1,13 @@
+name: Create issues across prods and levels
+on: workflow_dispatch 
+jobs:
+  create-new-issue:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        prod: [prod1, prod2]
+        level: [dev, stage, rel]
+    steps:
+      - name: printeaza
+        run: |
+          echo "${{ matrix.prod}} issue"
