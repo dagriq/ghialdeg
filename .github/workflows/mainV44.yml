@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: printeaza
         run: |
-          echo "${{ matrix.prod}} issue"
+          echo "${{ matrix.prod}},${{ matrix.level}  issue"
